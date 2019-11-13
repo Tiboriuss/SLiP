@@ -7,6 +7,17 @@
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<!-- <link href="style.css" rel="stylesheet" type="text/css" media="screen" /> -->
+	<script>
+		navigator.wakeLock.request("display").then(
+			function successFunction() {
+			// success
+		},
+			function errorFunction() {
+			// error
+		}
+	</script>
+	
+	
 	<style type="text/css">
     body {
 		overflow: hidden;
@@ -64,6 +75,7 @@
 		font-size: x-large;
 		color: white;
 		z-index: 0;
+		min-width: 270px;
 	}
 	.userchooserselect{
 		position: fixed;
