@@ -21,6 +21,7 @@ You have to open this page (index) and set your settings. Then you have to open 
 The newly opened page is a javascript-called window and can close itself after entering the "password" (Due to some javascript restrictions).</br>
 Now close the first page and make the phishing page fullscreen. Have fun!
 
+
 <H2>Settings</H2>
 
 <form action="phish.php" target="_blank" method="GET">
@@ -46,6 +47,14 @@ Background Image: 	</br>
 
 
 <button>Test yourself!</button>
+
+
+
+<H2>Antisleep</H2>
+i have added a javascript from here https://github.com/ivanmaeder/computer-sleep </br>
+It should play a soundfile without sound in the background.</br>
+I have not tested it!! But i know that at least Firefox needs to whitelist the site to autoplay media. You can do that in the url bar on the very left. </br>
+Again: untested!
 
 </body>
 </html>
