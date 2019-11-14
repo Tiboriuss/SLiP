@@ -11,6 +11,17 @@ You have to open this page (index) and set your settings. Then you have to open 
 The newly opened page is a javascript-called window and can close itself after entering the "password" (Due to some javascript restrictions).
 Now close the first page and make the phishing page fullscreen. Have fun! 
 
+## Example
+I have no idea of input sanitizing. Because of this, i fear that uploading an working example, will attract someone who drops a shell or some shit through the password-saving (stealing) form.
+So look for an example here: https://gfycat.com/ideallikelyfowl
+
+## Known Issues
+-Looks like shit to everyone who keeps comparing the original with the phish-site.
+-Does not work in internet explorer
+-Not tested in Edge (I don't even know how i removed it from my system, but i will not try to add it back)
+-People are automated enough to just enter their password in something like this (yes, that's an issue)
+
+
 ## Antisleep
 i have added a javascript from here https://github.com/ivanmaeder/computer-sleep
 It should play a soundfile without sound in the background.
