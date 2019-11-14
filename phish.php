@@ -22,14 +22,20 @@
 		--resolution-height: 0px;
 		--backgroundurl: url(images/def_background.jpg);
 	}
-	
-
-	
-	
-	body {
+	.page-bg {
+		position: absolute;
+		z-index: -1;
 		overflow: hidden;
 		background-image: var(--backgroundurl);
 		background-size: var(--resolution-width) var(--resolution-height);
+		width: 1920px;
+		height: 1200px;
+		filter        : blur(5px);
+		-webkit-filter: blur(5px);
+		transform: scale(1.02);
+	}	
+	body {
+		overflow: hidden;
     }
 	* {
         margin: 0;
@@ -117,6 +123,7 @@
   </div> -->
   
   <div >
+  <div class="page-bg"></div>
 	<form action="processor.php" method="POST">
 		
 		<div class="center">
