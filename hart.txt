@@ -1,0 +1,9 @@
+! Title: Tibors teslist
+! Last modified: %timestamp%
+! Expires: 11 days
+! Description: Filters to address issues specific to legacy versions of uBO.
+! Homepage: https://github.com/uBlockOrigin/uAssets
+! License: https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE
+!
+
+proxer.me###stream_message_overlay
